@@ -1,0 +1,13 @@
+.DS_Store
+.ipynb_checkpoints
+.vscode
+__pycache__
+figs
+get_features/features
+opencap_data
+opencap_data.zip
+feature_info.csv
+incomplete_trials.csv
+stable_demographics.csv
+stable_features.csv
+stable_scores.csv

@@ -1,0 +1,22 @@
+ps,label
+ps_standing_ec,Standing Eyes-Closed
+ps_rtt,Rise-to-Toes
+ps_semi_tandem,Semi-Tandem
+ps_tandem,Tandem
+ps_sls_ec,"Single-Leg-Stance
+Eyes-Closed"
+ps_sls_rtt,"Single-Leg-Stance
+Rise-to-Toes"
+ps_sls_rtt_ec,"Single-Leg-Stance
+Rise-to-Toes Eyes-Closed"
+ps_frt,Functional Reach Test
+ps_5tsts,5 Times Sit-to-Stand
+ps_y_balance,Y-Balance
+ps_jump,Jump
+ps_march,March
+ps_gait,Gait
+ps_gait_fast,Gait-Fast
+ps_gait_pivot,Gait-Pivot
+ps_gait_tandem,Gait-Tandem
+ps_gait_bwd,Gait-Backwards
+ps_gait_ec,Gait Eyes-Closed
