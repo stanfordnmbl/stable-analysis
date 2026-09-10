@@ -25,7 +25,20 @@ The dataset is hosted on Zenodo: https://doi.org/10.5281/zenodo.22286165
 Data can be downloaded through the browser, or through the command line as follows:
 
 ```
-zenodo_get -d 10.5281/zenodo.22286165
+zenodo_get -d 10.5281/zenodo.22286165 -o zenodo_data
+```
+
+Move all of the files, except the dataset `README.md`, to the working directory.
+
+Windows:
+```
+move zenodo_data\*.csv .
+move zenodo_data\*.zip .
+```
+
+MacOS: 
+```
+mv zenodo_data/*.csv zenodo_data/*.zip .
 ```
 
 At this point, your working directory should be organized as follows:
@@ -34,6 +47,7 @@ At this point, your working directory should be organized as follows:
 [working_directory]
 └── stable-analysis
     ├── get_features
+	├── zenodo_data
 	├── .gitignore
     ├── compute_scores.ipynb
 	├── df_ps_col_labels.csv
@@ -51,8 +65,7 @@ At this point, your working directory should be organized as follows:
 	├── stable_demographics.csv
 	├── stable_features.csv
 	└── stable_scores.csv
-	
-	
+		
 ```
 
 Unzip the `opencap_data.zip` to the stable-analysis directory.
@@ -66,11 +79,11 @@ MacOS:
 unzip opencap_data.zip
 ```
 
-## Running Juypter Notebooks
+## Juypter Notebooks
 The code for the extracting the features, StaBLE scores, and figure generation is in Jupyter Notebooks. 
 These can be run in Jupyter Lab (use command `jupyter lab` to launch) or in [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) with the Jupyter and Python extensions.
 
-## Generate Features
+## Feature Generation
 `get_features` contains the code used to segment and extract the features for each StaBLE task for the exemplar data in `opencap_data`.
 Extract the task features for the exemplar participants using the`get_features.ipynb` notebook.
 Run each cell in the notebook to generate a `.json` file (saved to `features`) containing the respective task's features for each participant.
@@ -79,13 +92,13 @@ Feature descriptions, and whether the goal is to minimize or maximize a given fe
 
 Feature values for the full dataset can be found in `stable_features.csv`. 
 
-## Generate StaBLE Score
+## StaBLE Score Generation
 `compute_scores.ipynb` computes the normalized features, task scores, and StaBLE score for all 180 participants. 
 
 It reads in `stable_demographics.csv` and `stable_features.csv` and outputs `stable_scores.csv`. 
 The `stable_scores.csv` file combines the input csv data (demographics and raw features) with the normalized features and scores. 
 
-## Generate Figures
+## Figure Generation
 `fig[2,4,5,6].ipynb` reproduce the reported figures and statistical analyses. Statistics from the manuscript are displayed in the Jupyter Notebook and figures are saved to `figs`
 
 ## Citing This Work
